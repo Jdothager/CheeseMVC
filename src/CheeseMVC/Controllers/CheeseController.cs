@@ -34,10 +34,11 @@ namespace CheeseMVC.Controllers
             if (ModelState.IsValid)
             {
                 // Add the new cheese to my existing cheeses
-                Cheese newCheese = new Models.Cheese
+                Cheese newCheese = new Cheese
                 {
                     Name = addCheeseViewModel.Name,
-                    Description = addCheeseViewModel.Description
+                    Description = addCheeseViewModel.Description,
+                    Type = addCheeseViewModel.Type
                 };
 
                 CheeseData.Add(newCheese);
